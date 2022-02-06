@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="cheat\cheat.cpp">
+      <Filter>cheat</Filter>
+    </ClCompile>
+    <ClCompile Include="jvm\jvm.cpp">
+      <Filter>jvm</Filter>
+    </ClCompile>
+    <ClCompile Include="other\memory\memory.cpp">
+      <Filter>other\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="cheat\hook\impl\opengl.cpp">
+      <Filter>cheat\hook\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="cheat\hook\impl\win32.cpp">
+      <Filter>cheat\hook\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="other\peb\peb.cpp">
+      <Filter>other\peb</Filter>
+    </ClCompile>
+    <ClCompile Include="other\module\module.cpp">
+      <Filter>other\module</Filter>
+    </ClCompile>
+    <ClCompile Include="game\modules\modules.cpp">
+      <Filter>game\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="game\classes\minecraft\minecraft.cpp">
+      <Filter>game\classes\minecraft</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="other">
+      <UniqueIdentifier>{cbbc3095-33de-4ad2-b8bf-cf010ddcca3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cheat">
+      <UniqueIdentifier>{860b569b-5c54-44d3-b3cd-6136e1ea005e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jvm">
+      <UniqueIdentifier>{189c9182-457b-4e6c-87bd-8a62164d88a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other\util">
+      <UniqueIdentifier>{1c6658e2-a672-4059-b7a5-6497df4a5949}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jvm\types">
+      <UniqueIdentifier>{efeadb11-5153-4114-aef3-1c0b177d6d30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other\memory">
+      <UniqueIdentifier>{ef97435e-fc73-45be-9f0b-096514838b72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cheat\hook">
+      <UniqueIdentifier>{5328bc61-e71d-4a6f-b919-f12a937a9f85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cheat\hook\impl">
+      <UniqueIdentifier>{9fc3fba7-ae6c-48fe-bd8e-e92558019d29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other\peb">
+      <UniqueIdentifier>{4a19e33e-923d-4788-b0c2-478f8232edb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other\module">
+      <UniqueIdentifier>{de820ece-4535-4760-8821-f2f38dde607e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other\hash">
+      <UniqueIdentifier>{d7840113-4d6e-468c-b67c-80e285977cca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game">
+      <UniqueIdentifier>{477a339d-495a-4bf8-8856-60528a97f941}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\modules">
+      <UniqueIdentifier>{7a32839f-c94e-4139-ac21-9402fc5da8df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\classes">
+      <UniqueIdentifier>{af3ac999-1765-4c21-9826-9d57bda924a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\classes\minecraft">
+      <UniqueIdentifier>{ac00c8e4-9ed1-474c-a144-bae8ec1a536b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cheat\cheat.hpp">
+      <Filter>cheat</Filter>
+    </ClInclude>
+    <ClInclude Include="other\util\wrapper.hpp">
+      <Filter>other\util</Filter>
+    </ClInclude>
+    <ClInclude Include="other\util\xors.hpp">
+      <Filter>other\util</Filter>
+    </ClInclude>
+    <ClInclude Include="other\util\lazy.hpp">
+      <Filter>other\util</Filter>
+    </ClInclude>
+    <ClInclude Include="jvm\types\classloaderdata.hpp">
+      <Filter>jvm\types</Filter>
+    </ClInclude>
+    <ClInclude Include="other\util\version.hpp">
+      <Filter>other\util</Filter>
+    </ClInclude>
+    <ClInclude Include="jvm\jvm.hpp">
+      <Filter>jvm</Filter>
+    </ClInclude>
+    <ClInclude Include="other\memory\memory.hpp">
+      <Filter>other\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="jvm\types\instanceklass.hpp">
+      <Filter>jvm\types</Filter>
+    </ClInclude>
+    <ClInclude Include="jvm\types\symbol.hpp">
+      <Filter>jvm\types</Filter>
+    </ClInclude>
+    <ClInclude Include="cheat\hook\hook.hpp">
+      <Filter>cheat\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="other\peb\peb.hpp">
+      <Filter>other\peb</Filter>
+    </ClInclude>
+    <ClInclude Include="other\module\module.hpp">
+      <Filter>other\module</Filter>
+    </ClInclude>
+    <ClInclude Include="other\hash\hash.hpp">
+      <Filter>other\hash</Filter>
+    </ClInclude>
+    <ClInclude Include="game\modules\modules.hpp">
+      <Filter>game\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="jvm\types\array.hpp">
+      <Filter>jvm\types</Filter>
+    </ClInclude>
+    <ClInclude Include="jvm\types\method.hpp">
+      <Filter>jvm\types</Filter>
+    </ClInclude>
+    <ClInclude Include="jvm\types\constantpool.hpp">
+      <Filter>jvm\types</Filter>
+    </ClInclude>
+    <ClInclude Include="game\classes\minecraft\minecraft.hpp">
+      <Filter>game\classes\minecraft</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

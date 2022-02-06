@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+/internal/.vs/
+/internal/x64/
+/internal/internal/x64/
