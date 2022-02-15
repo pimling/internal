@@ -5,31 +5,40 @@
 #include "types/classloaderdata.hpp"
 #include "types/instanceklass.hpp"
 
-#include <iostream>
-
+// you can do this many different ways, this is one i thought of immediately 
+// so if its not optimal implement a better one yourself lol
 void c_jvm::find_minecraft_class( c_instanceklass* klass )
 {
+	static auto possible_classes = std::vector<c_instanceklass*>{ };
+
 	m_loaded_classes.emplace_back( klass );
 
 	if ( !klass->methods( ) || klass->methods( )->length( ) <= 0 )
 		return;
+	
+	const auto constants = klass->constants( );
 
-	for ( auto i = 0; i < klass->methods( )->length( ); i++ )
+	if ( !constants )
+		return;
+
+	const auto tags = constants->tags( );
+
+	if ( !tags || !tags->data( ) || tags->length( ) <= 0 )
+		return;
+
+	for ( auto i = 0; i < tags->length( ); i++ )
 	{
-		auto method = klass->methods( )->get( i );
+		const auto tag = tags->get( i );
 
-		if ( !method )
+		if ( tag != 0x1 ) // string
 			continue;
 
-		auto sig = method->signature( );
+		const auto tag_value = constants->at<c_symbol*>( i )->to_string( );
 
-		if ( !sig )
-			continue;
-
-		if ( sig->to_string( ).find( "()Lcom/mojang/authlib/minecraft/MinecraftSessionService;" ) != std::string::npos )
+		if ( tag_value.find( xors( "Pre render" ) ) != std::string::npos )
 		{
-			std::cout << klass->name( )->to_string( ) << std::endl;
-			break;
+			m_mc_class = klass; // we have found the minecraft class - hurrah!
+			return;
 		}
 	}
 }
@@ -49,7 +58,9 @@ void c_jvm::init( )
 				continue;
 
 			m_loaded_classes.emplace_back( klass );
-			find_minecraft_class( klass );
+
+			if ( !m_mc_class )
+				find_minecraft_class( klass );
 		}
 	}
 }

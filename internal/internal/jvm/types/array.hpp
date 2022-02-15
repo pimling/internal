@@ -21,4 +21,9 @@ public:
 	{
 		return this->m_data[ index ];
 	}
+
+	inline T addr_get( const size_t index )
+	{
+		return &this->m_data[ index ];
+	}
 };

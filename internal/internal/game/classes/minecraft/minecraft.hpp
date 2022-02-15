@@ -2,14 +2,15 @@
 
 #include <jni.h>
 
+#include "../../../jvm/jvm.hpp"
 #include "../../../jvm/types/instanceklass.hpp"
 
 class c_minecraft
 {
-	c_instanceklass* m_raw_class;
-	size_t m_handle;
-	jclass m_class;
+	c_instanceklass* m_class;
 
 public:
 	c_minecraft( c_instanceklass* mc_class );
+
+	static c_minecraft get( );
 };

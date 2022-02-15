@@ -184,6 +184,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cheat\cheat.cpp" />
+    <ClCompile Include="cheat\feature\impl\aim\aim.cpp" />
     <ClCompile Include="cheat\hook\impl\opengl.cpp" />
     <ClCompile Include="cheat\hook\impl\win32.cpp" />
     <ClCompile Include="dllmain.cpp" />
@@ -196,6 +197,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cheat\cheat.hpp" />
+    <ClInclude Include="cheat\feature\context.hpp" />
+    <ClInclude Include="cheat\feature\feature.hpp" />
     <ClInclude Include="cheat\hook\hook.hpp" />
     <ClInclude Include="game\classes\minecraft\minecraft.hpp" />
     <ClInclude Include="game\modules\modules.hpp" />

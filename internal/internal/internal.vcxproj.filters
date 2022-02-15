@@ -29,6 +29,9 @@
     <ClCompile Include="game\classes\minecraft\minecraft.cpp">
       <Filter>game\classes\minecraft</Filter>
     </ClCompile>
+    <ClCompile Include="cheat\feature\impl\aim\aim.cpp">
+      <Filter>cheat\feature\impl\aim</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="other">
@@ -75,6 +78,15 @@
     </Filter>
     <Filter Include="game\classes\minecraft">
       <UniqueIdentifier>{ac00c8e4-9ed1-474c-a144-bae8ec1a536b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cheat\feature">
+      <UniqueIdentifier>{e2fd514c-a219-41bf-8cc5-ff8a60ad6136}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cheat\feature\impl">
+      <UniqueIdentifier>{dae607c5-0557-4e13-a28a-6de56d5469c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cheat\feature\impl\aim">
+      <UniqueIdentifier>{75e88d7a-3cc7-4d43-a48d-053e02d9164d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -134,6 +146,12 @@
     </ClInclude>
     <ClInclude Include="game\classes\minecraft\minecraft.hpp">
       <Filter>game\classes\minecraft</Filter>
+    </ClInclude>
+    <ClInclude Include="cheat\feature\feature.hpp">
+      <Filter>cheat\feature</Filter>
+    </ClInclude>
+    <ClInclude Include="cheat\feature\context.hpp">
+      <Filter>cheat\feature</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
